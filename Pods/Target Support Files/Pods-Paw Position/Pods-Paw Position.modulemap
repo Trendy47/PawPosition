@@ -1,0 +1,6 @@
+framework module Pods_Paw_Position {
+  umbrella header "Pods-Paw Position-umbrella.h"
+
+  export *
+  module * { export * }
+}
