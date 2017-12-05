@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cGc-bE-Tn0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGc-bE-Tn0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4352" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,14 +14,11 @@
         <scene sceneID="O9d-js-ZqN">
             <objects>
                 <viewController id="e0w-Za-ReP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2b6-bw-5jb"/>
-                        <viewControllerLayoutGuide type="bottom" id="TdA-Qx-BCF"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="trD-iC-Gx8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xeR-yA-4fZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="8W5-po-CAK"/>
                 </viewController>
@@ -31,26 +29,23 @@
         <!--Map-->
         <scene sceneID="UmW-KJ-AwM">
             <objects>
-                <viewController title="Map" id="AWj-r0-xEw" customClass="PPMapViewController" customModule="Paw_Position" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oxu-ct-ymf"/>
-                        <viewControllerLayoutGuide type="bottom" id="pN6-jH-gHj"/>
-                    </layoutGuides>
+                <viewController title="Map" id="AWj-r0-xEw" customClass="PawMapViewController" customModule="Paw_Position" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y4B-Bf-E6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dcn-JX-Ian">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pN6-jH-gHj" firstAttribute="top" secondItem="dcn-JX-Ian" secondAttribute="bottom" id="Z6G-lR-O1G"/>
-                            <constraint firstItem="dcn-JX-Ian" firstAttribute="leading" secondItem="y4B-Bf-E6t" secondAttribute="leading" id="ega-Ph-2dd"/>
-                            <constraint firstAttribute="trailing" secondItem="dcn-JX-Ian" secondAttribute="trailing" id="egc-QP-dLM"/>
-                            <constraint firstItem="dcn-JX-Ian" firstAttribute="top" secondItem="y4B-Bf-E6t" secondAttribute="top" id="g02-S8-orS"/>
+                            <constraint firstItem="dcn-JX-Ian" firstAttribute="leading" secondItem="lbl-Ah-FSQ" secondAttribute="leading" id="Pfr-PE-5QZ"/>
+                            <constraint firstItem="dcn-JX-Ian" firstAttribute="trailing" secondItem="lbl-Ah-FSQ" secondAttribute="trailing" id="lbG-Mh-fhn"/>
+                            <constraint firstItem="dcn-JX-Ian" firstAttribute="top" secondItem="lbl-Ah-FSQ" secondAttribute="top" id="sJb-Pq-CaV"/>
+                            <constraint firstItem="dcn-JX-Ian" firstAttribute="bottom" secondItem="lbl-Ah-FSQ" secondAttribute="bottom" id="uYw-W6-9J7"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="lbl-Ah-FSQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="G4W-0J-moO"/>
                     <connections>
@@ -83,14 +78,11 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="Settings" id="BYZ-38-t0r" customClass="ViewController" customModule="Paw_Position" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="VqN-E9-ZaE"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4824B77B826F702A554005CB /* Pods_Paw_Position.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59250438618F02AA75A2D791 /* Pods_Paw_Position.framework */; };
 		71920D1D8392D4C0147B487E /* Pods_Paw_PositionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E1718A8AC0ED92D0199F9 /* Pods_Paw_PositionTests.framework */; };
+		83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */; };
+		83FF3FDE1FD6353D006BB0A8 /* PawAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDD1FD6353D006BB0A8 /* PawAnnotation.swift */; };
 		CD3A4A5EE87C6FE50381FD38 /* Pods_Paw_PositionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD5FBF52733B760EC3867A5 /* Pods_Paw_PositionUITests.framework */; };
 		DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC3F01F4CFD870044810D /* AppDelegate.swift */; };
 		DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC3F21F4CFD870044810D /* ViewController.swift */; };
@@ -17,7 +19,7 @@
 		DD5FC3FB1F4CFD870044810D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5FC3F91F4CFD870044810D /* LaunchScreen.storyboard */; };
 		DD5FC4061F4CFD880044810D /* Paw_PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC4051F4CFD880044810D /* Paw_PositionTests.swift */; };
 		DD5FC4111F4CFD880044810D /* Paw_PositionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC4101F4CFD880044810D /* Paw_PositionUITests.swift */; };
-		DD5FC4201F4CFFC30044810D /* PPMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC41F1F4CFFC30044810D /* PPMapViewController.swift */; };
+		DD5FC4201F4CFFC30044810D /* PawMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		59250438618F02AA75A2D791 /* Pods_Paw_Position.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_Position.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB2FB7F20A2AFDB3CA3405A /* Pods-Paw PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionTests/Pods-Paw PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawLocationManager.swift; sourceTree = "<group>"; };
+		83FF3FDD1FD6353D006BB0A8 /* PawAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawAnnotation.swift; sourceTree = "<group>"; };
 		86C256C6156A42403EE6084A /* Pods-Paw PositionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionUITests/Pods-Paw PositionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D4E1718A8AC0ED92D0199F9 /* Pods_Paw_PositionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_PositionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD5FBF52733B760EC3867A5 /* Pods_Paw_PositionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_PositionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +62,7 @@
 		DD5FC40C1F4CFD880044810D /* Paw PositionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paw PositionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5FC4101F4CFD880044810D /* Paw_PositionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paw_PositionUITests.swift; sourceTree = "<group>"; };
 		DD5FC4121F4CFD880044810D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD5FC41F1F4CFFC30044810D /* PPMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPMapViewController.swift; sourceTree = "<group>"; };
+		DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawMapViewController.swift; sourceTree = "<group>"; };
 		F1842CFFA9B99E579F345216 /* Pods-Paw Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw Position/Pods-Paw Position.release.xcconfig"; sourceTree = "<group>"; };
 		FD2DA34D755EA0A5FBC24352 /* Pods-Paw PositionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionTests/Pods-Paw PositionTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		83FF3FDA1FCF9CEB006BB0A8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		83FF3FDF1FD63CC9006BB0A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83FF3FDD1FD6353D006BB0A8 /* PawAnnotation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B8E8E22A2782A6CA4E25ACF4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +159,7 @@
 		DD5FC3EF1F4CFD870044810D /* Paw Position */ = {
 			isa = PBXGroup;
 			children = (
+				83FF3FDA1FCF9CEB006BB0A8 /* Utilities */,
 				DD5FC41E1F4CFF9E0044810D /* Map */,
 				DD5FC3F01F4CFD870044810D /* AppDelegate.swift */,
 				DD5FC3F21F4CFD870044810D /* ViewController.swift */,
@@ -171,7 +192,8 @@
 		DD5FC41E1F4CFF9E0044810D /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				DD5FC41F1F4CFFC30044810D /* PPMapViewController.swift */,
+				83FF3FDF1FD63CC9006BB0A8 /* Model */,
+				DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -476,8 +498,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */,
+				83FF3FDE1FD6353D006BB0A8 /* PawAnnotation.swift in Sources */,
+				83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */,
 				DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */,
-				DD5FC4201F4CFFC30044810D /* PPMapViewController.swift in Sources */,
+				DD5FC4201F4CFFC30044810D /* PawMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

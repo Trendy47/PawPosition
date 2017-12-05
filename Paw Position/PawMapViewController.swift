@@ -9,11 +9,12 @@
 import UIKit
 import MapKit
 
-class PPMapViewController: UIViewController {
+class PawMapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
     let regionRadius: CLLocationDistance = 1000
+    let ppLocationManager: PawLocationManager = PawLocationManager.sharedInstance
     
     /**
      * Life Cycle
@@ -22,8 +23,15 @@ class PPMapViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let initialLoc = CLLocation(latitude: 41.7359, longitude: -73.01538)
-        centerOnMapLocation(location: initialLoc)
+        ppLocationManager.startUpdatingLocation()
+        if let test = ppLocationManager.lastLocation {
+            centerOnMapLocation(location: test)
+        }
+        
+        // show map object on map - this is for testing
+        let mapObject = PawAnnotation(title: "Lost Dog", name: "Sparky", subText: "Lost dog near some street, likes cheese", coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
+        
+        mapView.addAnnotation(mapObject)
     }
     
     override func didReceiveMemoryWarning() {
