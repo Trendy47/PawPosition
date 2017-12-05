@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class PawMapViewController: UIViewController {
+class PawMapViewController: ViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -23,15 +23,17 @@ class PawMapViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        mapView.delegate = self
+        
         ppLocationManager.startUpdatingLocation()
         if let test = ppLocationManager.lastLocation {
             centerOnMapLocation(location: test)
         }
         
         // show map object on map - this is for testing
-        let mapObject = PawAnnotation(title: "Lost Dog", name: "Sparky", subText: "Lost dog near some street, likes cheese", coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
+        let annotation = PawAnnotation(title: "Lost Dog", locationName: "Sparky", discipline: "dog", coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
         
-        mapView.addAnnotation(mapObject)
+        mapView.addAnnotation(annotation)
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,4 +56,27 @@ class PawMapViewController: UIViewController {
     /**
      * End Region
      */
+}
+
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? PawAnnotation else {
+            return nil
+        }
+        
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: 0, y: 0)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        return view
+    }
 }

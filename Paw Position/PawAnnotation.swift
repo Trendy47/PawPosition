@@ -10,16 +10,20 @@ import MapKit
 
 class PawAnnotation: NSObject, MKAnnotation {
     let title: String?
-    let name: String?
-    let subText: String
+    let locationName: String?
+    let discipline: String
     let coordinate: CLLocationCoordinate2D
     
-    init(title: String, name: String, subText: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, locationName: String, discipline: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
-        self.name = name
-        self.subText = subText
+        self.locationName = locationName
+        self.discipline = discipline
         self.coordinate = coordinate
         
         super.init()
+    }
+    
+    var subtitle: String? {
+        return locationName
     }
 }
