@@ -1,5 +1,5 @@
 //
-//  PPLocationManager.swift
+//  PawLocationManager.swift
 //  Paw Position
 //
 //  Created by Christopher Tirendi on 11/29/17.
