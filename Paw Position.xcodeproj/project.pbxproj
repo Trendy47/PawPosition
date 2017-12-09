@@ -10,6 +10,9 @@
 		4824B77B826F702A554005CB /* Pods_Paw_Position.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59250438618F02AA75A2D791 /* Pods_Paw_Position.framework */; };
 		71920D1D8392D4C0147B487E /* Pods_Paw_PositionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E1718A8AC0ED92D0199F9 /* Pods_Paw_PositionTests.framework */; };
 		8368B03F1FDC4C4B00113D26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */; };
+		8368B0431FDC7A0500113D26 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8368B0411FDC7A0500113D26 /* settings.png */; };
+		8368B0441FDC7A0500113D26 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8368B0421FDC7A0500113D26 /* map.png */; };
+		8368B0461FDC7B8400113D26 /* PawDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368B0451FDC7B8400113D26 /* PawDetailViewController.swift */; };
 		8384D0AA1FD7A693003C4DBA /* PawMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */; };
 		83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */; };
 		83FF3FDE1FD6353D006BB0A8 /* PawMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDD1FD6353D006BB0A8 /* PawMarker.swift */; };
@@ -45,6 +48,9 @@
 		59250438618F02AA75A2D791 /* Pods_Paw_Position.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_Position.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB2FB7F20A2AFDB3CA3405A /* Pods-Paw PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionTests/Pods-Paw PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8368B0411FDC7A0500113D26 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		8368B0421FDC7A0500113D26 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		8368B0451FDC7B8400113D26 /* PawDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawDetailViewController.swift; sourceTree = "<group>"; };
 		8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawMarkerView.swift; sourceTree = "<group>"; };
 		83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawLocationManager.swift; sourceTree = "<group>"; };
 		83FF3FDD1FD6353D006BB0A8 /* PawMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawMarker.swift; sourceTree = "<group>"; };
@@ -107,6 +113,23 @@
 				ABD5FBF52733B760EC3867A5 /* Pods_Paw_PositionUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		835ED6851FDC86B00097DA73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8368B0401FDC79DD00113D26 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8368B0421FDC7A0500113D26 /* map.png */,
+				8368B0411FDC7A0500113D26 /* settings.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		83FF3FDA1FCF9CEB006BB0A8 /* Utilities */ = {
@@ -172,6 +195,7 @@
 				DD5FC3F91F4CFD870044810D /* LaunchScreen.storyboard */,
 				DD5FC3FC1F4CFD870044810D /* Info.plist */,
 				8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */,
+				8368B0401FDC79DD00113D26 /* images */,
 			);
 			path = "Paw Position";
 			sourceTree = "<group>";
@@ -197,9 +221,10 @@
 		DD5FC41E1F4CFF9E0044810D /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				835ED6851FDC86B00097DA73 /* View */,
 				83FF3FDF1FD63CC9006BB0A8 /* Model */,
 				DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */,
-				8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */,
+				8368B0451FDC7B8400113D26 /* PawDetailViewController.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -326,7 +351,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8368B0441FDC7A0500113D26 /* map.png in Resources */,
 				DD5FC3FB1F4CFD870044810D /* LaunchScreen.storyboard in Resources */,
+				8368B0431FDC7A0500113D26 /* settings.png in Resources */,
 				8368B03F1FDC4C4B00113D26 /* GoogleService-Info.plist in Resources */,
 				DD5FC3F81F4CFD870044810D /* Assets.xcassets in Resources */,
 				DD5FC3F61F4CFD870044810D /* Main.storyboard in Resources */,
@@ -508,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8368B0461FDC7B8400113D26 /* PawDetailViewController.swift in Sources */,
 				DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */,
 				8384D0AA1FD7A693003C4DBA /* PawMarkerView.swift in Sources */,
 				83FF3FDE1FD6353D006BB0A8 /* PawMarker.swift in Sources */,

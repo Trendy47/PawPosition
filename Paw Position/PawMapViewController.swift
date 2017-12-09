@@ -11,12 +11,14 @@ import MapKit
 
 class PawMapViewController: ViewController, MKMapViewDelegate {
     
+    // outlets
     @IBOutlet weak var mapView: MKMapView!
     
     let regionRadius: CLLocationDistance = 1000
     let ppLocationManager: PawLocationManager = PawLocationManager.sharedInstance
     
     var annotations: Array<MKAnnotation> = Array<MKAnnotation>()
+    var selectedMarker: PawMarker?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -54,18 +56,15 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
     // MARK: - MKMapViewDelegate
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
         if control == view.rightCalloutAccessoryView {
-            
-            let title: String = ((view.annotation?.title)!)!
-            let subtitle: String = ((view.annotation?.subtitle)!)!
-            
-            let alertController = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
-            let closeAction = UIAlertAction(title: "Close", style: .cancel) { (action:UIAlertAction) in
-                print("You've pressed cancel");
-            }
-            
-            alertController.addAction(closeAction)
-            
-            self.present(alertController, animated: true, completion: nil)
+            selectedMarker = view.annotation as? PawMarker
+            performSegue(withIdentifier: "markDetail", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "markDetail" {
+            let pawDetailViewController: PawDetailViewController = segue.destination as! PawDetailViewController
+            pawDetailViewController.pawMarkerObject = selectedMarker
         }
     }
 }
