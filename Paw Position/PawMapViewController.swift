@@ -18,7 +18,7 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
     
     var annotations: Array<MKAnnotation> = Array<MKAnnotation>()
     
-    // #pragma mark - Life cycle
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,13 +45,13 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    // #pragma mark - Location
+    // MARK: Location
     func centerOnMapLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius,regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    // #pragma mark - MKMapViewDelegate
+    // MARK: - MKMapViewDelegate
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
         if control == view.rightCalloutAccessoryView {
             

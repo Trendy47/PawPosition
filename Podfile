@@ -6,7 +6,12 @@ target 'Paw Position' do
   use_frameworks!
 
   # Pods for Paw Position
-    pod 'Alamofire', '~> 4.5'
+  
+  # alamofire pod
+  pod 'Alamofire', '~> 4.5'
+    
+  # firebase pod
+  pod 'Firebase/Core'
 
   target 'Paw PositionTests' do
     inherit! :search_paths
