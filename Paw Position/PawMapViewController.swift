@@ -18,6 +18,9 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
     let ppLocationManager: PawLocationManager = PawLocationManager.sharedInstance
     
     var annotations: Array<MKAnnotation> = Array<MKAnnotation>()
+    
+    var isAddingMarker: Bool?
+    var selectedLocation: CLLocationCoordinate2D?
     var selectedMarker: PawMarker?
     
     // MARK: - Life cycle
@@ -34,6 +37,13 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
         
         mapView.register(PawMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
+        // create gesture
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(PawMapViewController.onMapLongPress(_:)))
+        longPress.minimumPressDuration = 1.5 // in seconds
+        
+        // add gesture
+        mapView.addGestureRecognizer(longPress)
+        
         // show map object on map - this is for testing
         let message = "Lost dog near some street, likes cheese, is brown with black spots."
         let annotation = PawMarker(title: "Lost Dog", pawName: "Sparky", discipline: "Dog", message: message, coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
@@ -47,6 +57,21 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: map touch events
+    @objc func onMapLongPress(_ recognizer: UIGestureRecognizer) {
+        // remove all annotations, add again at the bottom
+        mapView.removeAnnotations(mapView.annotations)
+        
+        // set map location
+        let touch = recognizer.location(in: self.mapView)
+        selectedLocation = mapView.convert(touch, toCoordinateFrom: self.mapView)
+        
+        // set boolean
+        isAddingMarker = true
+        
+        performSegue(withIdentifier: "markDetail", sender: self)
+    }
+    
     // MARK: Location
     func centerOnMapLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius,regionRadius)
@@ -56,6 +81,7 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
     // MARK: - MKMapViewDelegate
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
         if control == view.rightCalloutAccessoryView {
+            isAddingMarker = false
             selectedMarker = view.annotation as? PawMarker
             performSegue(withIdentifier: "markDetail", sender: self)
         }
@@ -65,6 +91,13 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
         if segue.identifier == "markDetail" {
             let pawDetailViewController: PawDetailViewController = segue.destination as! PawDetailViewController
             pawDetailViewController.pawMarkerObject = selectedMarker
+            pawDetailViewController.location = selectedLocation
+            pawDetailViewController.isAddingMarker = isAddingMarker
+            
+            // callback for adding marker to map
+            pawDetailViewController.addMarkerToMap = { result in self.annotations.append(result)
+                self.mapView.addAnnotations(self.annotations)
+            }
         }
     }
 }

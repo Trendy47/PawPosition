@@ -20,7 +20,7 @@ class PawMarkerView: MKMarkerAnnotationView {
             rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             
             markerTintColor = pawMarker.markerTintColor
-            glyphText = String(describing: pawMarker.discipline.first)
+            glyphText = "\(pawMarker.discipline.first ?? "P")"
         }
     }
 }
