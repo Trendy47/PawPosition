@@ -12,6 +12,7 @@ target 'Paw Position' do
     
   # firebase pod
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'Paw PositionTests' do
     inherit! :search_paths
