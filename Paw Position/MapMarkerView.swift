@@ -8,10 +8,10 @@
 
 import MapKit
 
-class PawMarkerView: MKMarkerAnnotationView {
+class MapMarkerView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
-            guard let pawMarker = newValue as? PawMarker else {
+            guard let pawMarker = newValue as? MapMarker else {
                 return
             }
             

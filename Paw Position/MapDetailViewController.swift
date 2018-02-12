@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class PawDetailViewController: ViewController {
+class MapDetailViewController: ViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var messageTextView: UITextView!
@@ -23,10 +23,10 @@ class PawDetailViewController: ViewController {
     var isAddingMarker: Bool?
     var location: CLLocationCoordinate2D?
     
-    var pawMarkerObject: PawMarker?
+    var pawMarkerObject: MapMarker?
     
     // callback function
-    var addMarkerToMap: ((_ result: PawMarker) -> ())?
+    var addMarkerToMap: ((_ result: MapMarker) -> ())?
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -57,7 +57,7 @@ class PawDetailViewController: ViewController {
         let name: String = (nameTextField.text)!
         let message: String = (messageTextView.text)!
         
-        let marker = PawMarker.init(title: title, pawName: name, discipline: "Dog", message: message, coordinate: location!)
+        let marker = MapMarker.init(title: title, pawName: name, discipline: "Dog", message: message, coordinate: location!)
         
         // callback to add marker to map
         addMarkerToMap?(marker)

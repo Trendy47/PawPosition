@@ -8,7 +8,7 @@
 
 import MapKit
 
-class PawMarker: NSObject, MKAnnotation {
+class MapMarker: NSObject, MKAnnotation {
     let title: String?
     let pawName: String
     let discipline: String

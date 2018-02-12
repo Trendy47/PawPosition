@@ -13,10 +13,12 @@
 		8368B03F1FDC4C4B00113D26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */; };
 		8368B0431FDC7A0500113D26 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 8368B0411FDC7A0500113D26 /* settings.png */; };
 		8368B0441FDC7A0500113D26 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8368B0421FDC7A0500113D26 /* map.png */; };
-		8368B0461FDC7B8400113D26 /* PawDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368B0451FDC7B8400113D26 /* PawDetailViewController.swift */; };
-		8384D0AA1FD7A693003C4DBA /* PawMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */; };
+		8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */; };
+		8384D0AA1FD7A693003C4DBA /* MapMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384D0A91FD7A693003C4DBA /* MapMarkerView.swift */; };
+		8393423C203126FC00D6C16E /* MapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393423B203126FC00D6C16E /* MapConfigurator.swift */; };
+		8393423F20312BA900D6C16E /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393423E20312BA900D6C16E /* MapPresenter.swift */; };
 		83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */; };
-		83FF3FDE1FD6353D006BB0A8 /* PawMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDD1FD6353D006BB0A8 /* PawMarker.swift */; };
+		83FF3FDE1FD6353D006BB0A8 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDD1FD6353D006BB0A8 /* MapMarker.swift */; };
 		CD3A4A5EE87C6FE50381FD38 /* Pods_Paw_PositionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD5FBF52733B760EC3867A5 /* Pods_Paw_PositionUITests.framework */; };
 		DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC3F01F4CFD870044810D /* AppDelegate.swift */; };
 		DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC3F21F4CFD870044810D /* ViewController.swift */; };
@@ -25,7 +27,7 @@
 		DD5FC3FB1F4CFD870044810D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5FC3F91F4CFD870044810D /* LaunchScreen.storyboard */; };
 		DD5FC4061F4CFD880044810D /* Paw_PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC4051F4CFD880044810D /* Paw_PositionTests.swift */; };
 		DD5FC4111F4CFD880044810D /* Paw_PositionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC4101F4CFD880044810D /* Paw_PositionUITests.swift */; };
-		DD5FC4201F4CFFC30044810D /* PawMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */; };
+		DD5FC4201F4CFFC30044810D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5FC41F1F4CFFC30044810D /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +54,12 @@
 		8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8368B0411FDC7A0500113D26 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		8368B0421FDC7A0500113D26 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
-		8368B0451FDC7B8400113D26 /* PawDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawDetailViewController.swift; sourceTree = "<group>"; };
-		8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawMarkerView.swift; sourceTree = "<group>"; };
+		8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
+		8384D0A91FD7A693003C4DBA /* MapMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerView.swift; sourceTree = "<group>"; };
+		8393423B203126FC00D6C16E /* MapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurator.swift; sourceTree = "<group>"; };
+		8393423E20312BA900D6C16E /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawLocationManager.swift; sourceTree = "<group>"; };
-		83FF3FDD1FD6353D006BB0A8 /* PawMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawMarker.swift; sourceTree = "<group>"; };
+		83FF3FDD1FD6353D006BB0A8 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		86C256C6156A42403EE6084A /* Pods-Paw PositionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionUITests/Pods-Paw PositionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D4E1718A8AC0ED92D0199F9 /* Pods_Paw_PositionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_PositionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD5FBF52733B760EC3867A5 /* Pods_Paw_PositionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_PositionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +78,7 @@
 		DD5FC40C1F4CFD880044810D /* Paw PositionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paw PositionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5FC4101F4CFD880044810D /* Paw_PositionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paw_PositionUITests.swift; sourceTree = "<group>"; };
 		DD5FC4121F4CFD880044810D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawMapViewController.swift; sourceTree = "<group>"; };
+		DD5FC41F1F4CFFC30044810D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F1842CFFA9B99E579F345216 /* Pods-Paw Position.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw Position.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw Position/Pods-Paw Position.release.xcconfig"; sourceTree = "<group>"; };
 		FD2DA34D755EA0A5FBC24352 /* Pods-Paw PositionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionTests/Pods-Paw PositionTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +121,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		835ED6851FDC86B00097DA73 /* View */ = {
+		835ED6851FDC86B00097DA73 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8384D0A91FD7A693003C4DBA /* PawMarkerView.swift */,
+				8393423D20312B2800D6C16E /* Views */,
+				8393423B203126FC00D6C16E /* MapConfigurator.swift */,
+				DD5FC41F1F4CFFC30044810D /* MapViewController.swift */,
+				8393423E20312BA900D6C16E /* MapPresenter.swift */,
 			);
-			name = View;
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		835ED68E2005B05C0097DA73 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				835ED6861FEA08F40097DA73 /* PawDataManager.swift */,
+			);
+			name = Firebase;
 			sourceTree = "<group>";
 		};
 		8368B0401FDC79DD00113D26 /* images */ = {
@@ -132,6 +147,15 @@
 				8368B0411FDC7A0500113D26 /* settings.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		8393423D20312B2800D6C16E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8384D0A91FD7A693003C4DBA /* MapMarkerView.swift */,
+				8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		83FF3FDA1FCF9CEB006BB0A8 /* Utilities */ = {
@@ -145,7 +169,7 @@
 		83FF3FDF1FD63CC9006BB0A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				83FF3FDD1FD6353D006BB0A8 /* PawMarker.swift */,
+				83FF3FDD1FD6353D006BB0A8 /* MapMarker.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -188,10 +212,10 @@
 		DD5FC3EF1F4CFD870044810D /* Paw Position */ = {
 			isa = PBXGroup;
 			children = (
+				835ED68E2005B05C0097DA73 /* Firebase */,
 				83FF3FDA1FCF9CEB006BB0A8 /* Utilities */,
 				DD5FC41E1F4CFF9E0044810D /* Map */,
 				DD5FC3F01F4CFD870044810D /* AppDelegate.swift */,
-				835ED6861FEA08F40097DA73 /* PawDataManager.swift */,
 				DD5FC3F21F4CFD870044810D /* ViewController.swift */,
 				DD5FC3F41F4CFD870044810D /* Main.storyboard */,
 				DD5FC3F71F4CFD870044810D /* Assets.xcassets */,
@@ -224,10 +248,8 @@
 		DD5FC41E1F4CFF9E0044810D /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				835ED6851FDC86B00097DA73 /* View */,
 				83FF3FDF1FD63CC9006BB0A8 /* Model */,
-				DD5FC41F1F4CFFC30044810D /* PawMapViewController.swift */,
-				8368B0451FDC7B8400113D26 /* PawDetailViewController.swift */,
+				835ED6851FDC86B00097DA73 /* Scene */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -540,14 +562,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8368B0461FDC7B8400113D26 /* PawDetailViewController.swift in Sources */,
+				8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */,
+				8393423C203126FC00D6C16E /* MapConfigurator.swift in Sources */,
 				DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */,
-				8384D0AA1FD7A693003C4DBA /* PawMarkerView.swift in Sources */,
-				83FF3FDE1FD6353D006BB0A8 /* PawMarker.swift in Sources */,
+				8384D0AA1FD7A693003C4DBA /* MapMarkerView.swift in Sources */,
+				83FF3FDE1FD6353D006BB0A8 /* MapMarker.swift in Sources */,
 				835ED6871FEA08F40097DA73 /* PawDataManager.swift in Sources */,
 				83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */,
+				8393423F20312BA900D6C16E /* MapPresenter.swift in Sources */,
 				DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */,
-				DD5FC4201F4CFFC30044810D /* PawMapViewController.swift in Sources */,
+				DD5FC4201F4CFFC30044810D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

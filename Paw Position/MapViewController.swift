@@ -9,7 +9,9 @@
 import UIKit
 import MapKit
 
-class PawMapViewController: ViewController, MKMapViewDelegate {
+class MapViewController: ViewController, MKMapViewDelegate {
+    var configurator: MapConfigurator?
+    var presenter: MapPresenter?
     
     // outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -21,12 +23,14 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
     
     var isAddingMarker: Bool?
     var selectedLocation: CLLocationCoordinate2D?
-    var selectedMarker: PawMarker?
+    var selectedMarker: MapMarker?
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        configurator?.configure(mapViewController: self)
         
         mapView.delegate = self
         
@@ -35,10 +39,10 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
             centerOnMapLocation(location: test)
         }
         
-        mapView.register(PawMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(MapMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         // create gesture
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(PawMapViewController.onMapLongPress(_:)))
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.onMapLongPress(_:)))
         longPress.minimumPressDuration = 1.5 // in seconds
         
         // add gesture
@@ -46,7 +50,7 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
         
         // show map object on map - this is for testing
         let message = "Lost dog near some street, likes cheese, is brown with black spots."
-        let annotation = PawMarker(title: "Lost Dog", pawName: "Sparky", discipline: "Dog", message: message, coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
+        let annotation = MapMarker(title: "Lost Dog", pawName: "Sparky", discipline: "Dog", message: message, coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
         
         annotations.append(annotation)
         mapView.addAnnotations(annotations)
@@ -82,14 +86,14 @@ class PawMapViewController: ViewController, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
         if control == view.rightCalloutAccessoryView {
             isAddingMarker = false
-            selectedMarker = view.annotation as? PawMarker
+            selectedMarker = view.annotation as? MapMarker
             performSegue(withIdentifier: "markDetail", sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "markDetail" {
-            let pawDetailViewController: PawDetailViewController = segue.destination as! PawDetailViewController
+            let pawDetailViewController: MapDetailViewController = segue.destination as! MapDetailViewController
             pawDetailViewController.pawMarkerObject = selectedMarker
             pawDetailViewController.location = selectedLocation
             pawDetailViewController.isAddingMarker = isAddingMarker
