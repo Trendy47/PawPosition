@@ -15,8 +15,6 @@
 		8368B0441FDC7A0500113D26 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8368B0421FDC7A0500113D26 /* map.png */; };
 		8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */; };
 		8384D0AA1FD7A693003C4DBA /* MapMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8384D0A91FD7A693003C4DBA /* MapMarkerView.swift */; };
-		8393423C203126FC00D6C16E /* MapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393423B203126FC00D6C16E /* MapConfigurator.swift */; };
-		8393423F20312BA900D6C16E /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8393423E20312BA900D6C16E /* MapPresenter.swift */; };
 		83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */; };
 		83FF3FDE1FD6353D006BB0A8 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF3FDD1FD6353D006BB0A8 /* MapMarker.swift */; };
 		CD3A4A5EE87C6FE50381FD38 /* Pods_Paw_PositionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD5FBF52733B760EC3867A5 /* Pods_Paw_PositionUITests.framework */; };
@@ -56,8 +54,6 @@
 		8368B0421FDC7A0500113D26 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
 		8384D0A91FD7A693003C4DBA /* MapMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerView.swift; sourceTree = "<group>"; };
-		8393423B203126FC00D6C16E /* MapConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfigurator.swift; sourceTree = "<group>"; };
-		8393423E20312BA900D6C16E /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawLocationManager.swift; sourceTree = "<group>"; };
 		83FF3FDD1FD6353D006BB0A8 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		86C256C6156A42403EE6084A /* Pods-Paw PositionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionUITests/Pods-Paw PositionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,9 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				8393423D20312B2800D6C16E /* Views */,
-				8393423B203126FC00D6C16E /* MapConfigurator.swift */,
-				DD5FC41F1F4CFFC30044810D /* MapViewController.swift */,
-				8393423E20312BA900D6C16E /* MapPresenter.swift */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -154,6 +147,7 @@
 			children = (
 				8384D0A91FD7A693003C4DBA /* MapMarkerView.swift */,
 				8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */,
+				DD5FC41F1F4CFFC30044810D /* MapViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -563,13 +557,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */,
-				8393423C203126FC00D6C16E /* MapConfigurator.swift in Sources */,
 				DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */,
 				8384D0AA1FD7A693003C4DBA /* MapMarkerView.swift in Sources */,
 				83FF3FDE1FD6353D006BB0A8 /* MapMarker.swift in Sources */,
 				835ED6871FEA08F40097DA73 /* PawDataManager.swift in Sources */,
 				83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */,
-				8393423F20312BA900D6C16E /* MapPresenter.swift in Sources */,
 				DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */,
 				DD5FC4201F4CFFC30044810D /* MapViewController.swift in Sources */,
 			);

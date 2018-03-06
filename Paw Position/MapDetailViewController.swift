@@ -47,6 +47,13 @@ class MapDetailViewController: ViewController {
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // clear object when view is removed from foreground
+        pawMarkerObject = nil
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

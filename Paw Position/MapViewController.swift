@@ -10,8 +10,6 @@ import UIKit
 import MapKit
 
 class MapViewController: ViewController, MKMapViewDelegate {
-    var configurator: MapConfigurator?
-    var presenter: MapPresenter?
     
     // outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -29,8 +27,6 @@ class MapViewController: ViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        configurator?.configure(mapViewController: self)
         
         mapView.delegate = self
         

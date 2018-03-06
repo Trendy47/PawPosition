@@ -21,8 +21,6 @@ class MapMarker: NSObject, MKAnnotation {
         self.discipline = discipline
         self.message = message
         self.coordinate = coordinate
-        
-        super.init()
     }
     
     var subtitle: String? {
