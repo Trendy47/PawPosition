@@ -27,11 +27,16 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - Firebase/Core
   - Firebase/Database
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -43,7 +48,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   leveldb-library: 4f9eedf84ab46b4fa3b7893bf30714b2a1a74022
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
 
-PODFILE CHECKSUM: 691a72801e4ac5dcf6c58f2e5dfa36a980e0dc6c
+PODFILE CHECKSUM: 5317c415c3fb50aa84b4f9de7ecfedefee9b185b
 
 COCOAPODS: 1.3.1
