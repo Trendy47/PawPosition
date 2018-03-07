@@ -8,6 +8,7 @@
 
 import MapKit
 
+// this class is the popup annotation on the map
 class MapMarkerView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {

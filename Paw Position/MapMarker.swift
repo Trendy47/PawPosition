@@ -10,21 +10,21 @@ import MapKit
 
 class MapMarker: NSObject, MKAnnotation {
     let title: String?
-    let pawName: String
+    let name: String
     let discipline: String
     let message: String
     let coordinate: CLLocationCoordinate2D
     
-    init(title: String, pawName: String, discipline: String, message: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, name: String, discipline: String, message: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
-        self.pawName = pawName
+        self.name = name
         self.discipline = discipline
         self.message = message
         self.coordinate = coordinate
     }
     
     var subtitle: String? {
-        return pawName
+        return name
     }
     
     var getMessage: String? {

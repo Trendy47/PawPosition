@@ -13,6 +13,7 @@ import MapKit
 class MapDetailViewController: ViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var messageTextView: UITextView!
     
     @IBOutlet weak var addButton: UIButton!
@@ -20,10 +21,8 @@ class MapDetailViewController: ViewController {
     
     @IBOutlet weak var pawImageView: UIImageView!
     
-    var isAddingMarker: Bool?
-    var location: CLLocationCoordinate2D?
-    
-    var pawMarkerObject: MapMarker?
+    var mLocation: CLLocationCoordinate2D?
+    var mMapMarker: MapMarker?
     
     // callback function
     var addMarkerToMap: ((_ result: MapMarker) -> ())?
@@ -32,18 +31,19 @@ class MapDetailViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if pawMarkerObject != nil {
-            let title: String = (pawMarkerObject?.title)!
-            let name: String = (pawMarkerObject?.subtitle)!
-            let message: String = (pawMarkerObject?.getMessage)!
+        if mMapMarker != nil {
+            let title: String = (mMapMarker?.title)!
+            let name: String = (mMapMarker?.subtitle)!
+            let message: String = (mMapMarker?.getMessage)!
             
             titleTextField.text = title
             nameTextField.text = name
             messageTextView.text = message
-        }
-        
-        if !isAddingMarker! {
+            
             addButton.isHidden = true
+        } else {
+            // if object is null, then add create new object to add to map
+            addButton.isHidden = false
         }
     }
     
@@ -51,7 +51,7 @@ class MapDetailViewController: ViewController {
         super.viewDidAppear(animated)
         
         // clear object when view is removed from foreground
-        pawMarkerObject = nil
+        mMapMarker = nil
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +64,7 @@ class MapDetailViewController: ViewController {
         let name: String = (nameTextField.text)!
         let message: String = (messageTextView.text)!
         
-        let marker = MapMarker.init(title: title, pawName: name, discipline: "Dog", message: message, coordinate: location!)
+        let marker = MapMarker(title: title, name: name, discipline: "Dog", message: message, coordinate: mLocation!)
         
         // callback to add marker to map
         addMarkerToMap?(marker)

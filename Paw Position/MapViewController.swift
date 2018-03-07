@@ -19,7 +19,6 @@ class MapViewController: ViewController, MKMapViewDelegate {
     
     var annotations: Array<MKAnnotation> = Array<MKAnnotation>()
     
-    var isAddingMarker: Bool?
     var selectedLocation: CLLocationCoordinate2D?
     var selectedMarker: MapMarker?
     
@@ -46,7 +45,7 @@ class MapViewController: ViewController, MKMapViewDelegate {
         
         // show map object on map - this is for testing
         let message = "Lost dog near some street, likes cheese, is brown with black spots."
-        let annotation = MapMarker(title: "Lost Dog", pawName: "Sparky", discipline: "Dog", message: message, coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
+        let annotation = MapMarker(title: "Lost Dog", name: "Sparky", discipline: "Dog", message: message, coordinate: CLLocationCoordinate2D(latitude: 41.3782, longitude: -73.7128))
         
         annotations.append(annotation)
         mapView.addAnnotations(annotations)
@@ -59,15 +58,9 @@ class MapViewController: ViewController, MKMapViewDelegate {
     
     // MARK: map touch events
     @objc func onMapLongPress(_ recognizer: UIGestureRecognizer) {
-        // remove all annotations, add again at the bottom
-        mapView.removeAnnotations(mapView.annotations)
-        
         // set map location
         let touch = recognizer.location(in: self.mapView)
         selectedLocation = mapView.convert(touch, toCoordinateFrom: self.mapView)
-        
-        // set boolean
-        isAddingMarker = true
         
         performSegue(withIdentifier: "markDetail", sender: self)
     }
@@ -79,9 +72,8 @@ class MapViewController: ViewController, MKMapViewDelegate {
     }
     
     // MARK: - MKMapViewDelegate
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl){
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
-            isAddingMarker = false
             selectedMarker = view.annotation as? MapMarker
             performSegue(withIdentifier: "markDetail", sender: self)
         }
@@ -89,14 +81,14 @@ class MapViewController: ViewController, MKMapViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "markDetail" {
-            let pawDetailViewController: MapDetailViewController = segue.destination as! MapDetailViewController
-            pawDetailViewController.pawMarkerObject = selectedMarker
-            pawDetailViewController.location = selectedLocation
-            pawDetailViewController.isAddingMarker = isAddingMarker
-            
-            // callback for adding marker to map
-            pawDetailViewController.addMarkerToMap = { result in self.annotations.append(result)
-                self.mapView.addAnnotations(self.annotations)
+            if let controller = segue.destination as? MapDetailViewController {
+                controller.mMapMarker = selectedMarker
+                controller.mLocation = selectedLocation
+                
+                // callback for adding marker to map
+                controller.addMarkerToMap = { result in self.annotations.append(result)
+                    self.mapView.addAnnotations(self.annotations)
+                }
             }
         }
     }
