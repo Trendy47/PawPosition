@@ -205,28 +205,28 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="Xt4-5t-wcd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJH-nm-Av3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJH-nm-Av3">
                                 <rect key="frame" x="62" y="239" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="T4v-MP-hoI"/>
                                     <constraint firstAttribute="height" constant="30" id="ZDy-3p-Usa"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-P6-2Zt">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-P6-2Zt">
                                 <rect key="frame" x="62" y="328" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jV8-g6-sr9"/>
                                     <constraint firstAttribute="width" constant="250" id="tqp-ox-8lW"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffI-JZ-DVI">
@@ -234,7 +234,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Nvy-EM-dR1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -243,7 +243,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="udz-VY-xV7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -260,6 +260,33 @@
                                 <connections>
                                     <action selector="didTapLogin:" destination="7pk-jQ-sDy" eventType="touchUpInside" id="bJc-qd-6dg"/>
                                     <segue destination="cGc-bE-Tn0" kind="show" id="ycD-xQ-ziD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flr-bz-HN6">
+                                <rect key="frame" x="62" y="453" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCreateAccount:" destination="7pk-jQ-sDy" eventType="touchUpInside" id="q3O-t3-cFP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73M-Ix-GLh">
+                                <rect key="frame" x="180" y="502" width="17" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7P-1E-vg1">
+                                <rect key="frame" x="62" y="545" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Sign In with Google"/>
+                                <connections>
+                                    <action selector="didTapGoogleSignIn:" destination="7pk-jQ-sDy" eventType="touchUpInside" id="jHV-pn-Pr4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -289,13 +316,16 @@
                         <viewLayoutGuide key="safeArea" id="LAY-11-vdR"/>
                     </view>
                     <connections>
+                        <outlet property="createAccountButton" destination="flr-bz-HN6" id="j1Q-W0-CNF"/>
+                        <outlet property="googleSignInButton" destination="d7P-1E-vg1" id="nmB-Kt-Uj5"/>
+                        <outlet property="loginButton" destination="T2F-ME-H0e" id="gk5-b1-YXW"/>
                         <outlet property="passTextField" destination="pVP-P6-2Zt" id="cjD-00-0cZ"/>
                         <outlet property="userTextField" destination="mJH-nm-Av3" id="5R9-95-oob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WdK-X1-Ypb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2016" y="-93"/>
+            <point key="canvasLocation" x="-2148" y="-92.203898050974516"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1sd-sF-xvv">
