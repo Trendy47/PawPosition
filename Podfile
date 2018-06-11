@@ -11,8 +11,10 @@ target 'Paw Position' do
   pod 'Alamofire', '~> 4.5'
     
   # firebase pod
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'GoogleSignIn'
   
   # RxSwift
   pod 'RxSwift',    '~> 4.0'

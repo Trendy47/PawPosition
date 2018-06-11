@@ -19,6 +19,7 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     
+    var handle: AuthStateDidChangeListenerHandle?
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -26,6 +27,12 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        handle = Auth.auth().addStateDidChangeListener( { (auth, user) in
+            if user != nil {
+                //self.performSegue(withIdentifier: viewController name sender: nil)
+            }
+        })
         
         applyStyle()
     }
@@ -52,7 +59,8 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
     func applyStyle() {
         self.loginButton.layer.cornerRadius = 4.0
         self.createAccountButton.layer.cornerRadius = 4.0
-        self.googleSignInButton.layer.cornerRadius = 4.0
+        self.createAccountButton.layer.borderColor = UIColor.darkGray.cgColor
+        self.createAccountButton.layer.borderWidth = 1.0
     }
     
 }
