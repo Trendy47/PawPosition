@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4824B77B826F702A554005CB /* Pods_Paw_Position.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59250438618F02AA75A2D791 /* Pods_Paw_Position.framework */; };
 		71920D1D8392D4C0147B487E /* Pods_Paw_PositionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4E1718A8AC0ED92D0199F9 /* Pods_Paw_PositionTests.framework */; };
+		8306D4AA20FD70EF0004449E /* PawColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306D4A920FD70EF0004449E /* PawColor.swift */; };
+		8306D4AC20FD7D640004449E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8306D4AB20FD7D640004449E /* GoogleService-Info.plist */; };
+		8306D4AE20FD7D7A0004449E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8306D4AD20FD7D7A0004449E /* GoogleService-Info.plist */; };
 		835ED6871FEA08F40097DA73 /* PawDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835ED6861FEA08F40097DA73 /* PawDataManager.swift */; };
 		8368B03F1FDC4C4B00113D26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */; };
 		8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		59250438618F02AA75A2D791 /* Pods_Paw_Position.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paw_Position.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB2FB7F20A2AFDB3CA3405A /* Pods-Paw PositionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paw PositionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paw PositionTests/Pods-Paw PositionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8306D4A920FD70EF0004449E /* PawColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawColor.swift; sourceTree = "<group>"; };
+		8306D4AB20FD7D640004449E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8306D4AD20FD7D7A0004449E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		835ED6861FEA08F40097DA73 /* PawDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawDataManager.swift; sourceTree = "<group>"; };
 		8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */,
+				8306D4A920FD70EF0004449E /* PawColor.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 		DD5FC3E41F4CFD860044810D = {
 			isa = PBXGroup;
 			children = (
+				8306D4AB20FD7D640004449E /* GoogleService-Info.plist */,
 				DD5FC3EF1F4CFD870044810D /* Paw Position */,
 				DD5FC4041F4CFD880044810D /* Paw PositionTests */,
 				DD5FC40F1F4CFD880044810D /* Paw PositionUITests */,
@@ -204,6 +212,7 @@
 		DD5FC3EF1F4CFD870044810D /* Paw Position */ = {
 			isa = PBXGroup;
 			children = (
+				8306D4AD20FD7D7A0004449E /* GoogleService-Info.plist */,
 				8361128D20B5062B006F88BF /* Login */,
 				835ED68E2005B05C0097DA73 /* Firebase */,
 				83FF3FDA1FCF9CEB006BB0A8 /* Utilities */,
@@ -365,8 +374,10 @@
 			files = (
 				DD5FC3FB1F4CFD870044810D /* LaunchScreen.storyboard in Resources */,
 				8368B03F1FDC4C4B00113D26 /* GoogleService-Info.plist in Resources */,
+				8306D4AC20FD7D640004449E /* GoogleService-Info.plist in Resources */,
 				DD5FC3F81F4CFD870044810D /* Assets.xcassets in Resources */,
 				DD5FC3F61F4CFD870044810D /* Main.storyboard in Resources */,
+				8306D4AE20FD7D7A0004449E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +517,7 @@
 				835ED6871FEA08F40097DA73 /* PawDataManager.swift in Sources */,
 				83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */,
 				DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */,
+				8306D4AA20FD70EF0004449E /* PawColor.swift in Sources */,
 				DD5FC4201F4CFFC30044810D /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

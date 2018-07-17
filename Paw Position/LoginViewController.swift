@@ -26,6 +26,7 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        GIDSignIn.sharedInstance().signInSilently()
         GIDSignIn.sharedInstance().uiDelegate = self
         
         handle = Auth.auth().addStateDidChangeListener( { (auth, user) in
@@ -40,6 +41,12 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        if let handle = handle {
+            Auth.auth().removeStateDidChangeListener(handle)
+        }
     }
     
     // MARK: IBActions
