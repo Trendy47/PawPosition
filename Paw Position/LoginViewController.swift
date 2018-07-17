@@ -66,8 +66,6 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
     func applyStyle() {
         self.loginButton.layer.cornerRadius = 4.0
         self.createAccountButton.layer.cornerRadius = 4.0
-        self.createAccountButton.layer.borderColor = UIColor.darkGray.cgColor
-        self.createAccountButton.layer.borderWidth = 1.0
     }
     
 }
