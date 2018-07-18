@@ -12,6 +12,8 @@
 		8306D4AA20FD70EF0004449E /* PawColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306D4A920FD70EF0004449E /* PawColor.swift */; };
 		8306D4AC20FD7D640004449E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8306D4AB20FD7D640004449E /* GoogleService-Info.plist */; };
 		8306D4AE20FD7D7A0004449E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8306D4AD20FD7D7A0004449E /* GoogleService-Info.plist */; };
+		8306D4B020FEDDCC0004449E /* CreateAccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306D4AF20FEDDCC0004449E /* CreateAccViewController.swift */; };
+		8306D4B220FEE74C0004449E /* PawButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306D4B120FEE74C0004449E /* PawButton.swift */; };
 		835ED6871FEA08F40097DA73 /* PawDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835ED6861FEA08F40097DA73 /* PawDataManager.swift */; };
 		8368B03F1FDC4C4B00113D26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */; };
 		8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */; };
@@ -53,6 +55,8 @@
 		8306D4A920FD70EF0004449E /* PawColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawColor.swift; sourceTree = "<group>"; };
 		8306D4AB20FD7D640004449E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8306D4AD20FD7D7A0004449E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8306D4AF20FEDDCC0004449E /* CreateAccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccViewController.swift; sourceTree = "<group>"; };
+		8306D4B120FEE74C0004449E /* PawButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawButton.swift; sourceTree = "<group>"; };
 		835ED6861FEA08F40097DA73 /* PawDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawDataManager.swift; sourceTree = "<group>"; };
 		8368B03E1FDC4C4B00113D26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8368B0451FDC7B8400113D26 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				83B1A2BA20B5068C00BB23B0 /* LoginViewController.swift */,
+				8306D4AF20FEDDCC0004449E /* CreateAccViewController.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				83FF3FDB1FCF9D94006BB0A8 /* PawLocationManager.swift */,
 				8306D4A920FD70EF0004449E /* PawColor.swift */,
+				8306D4B120FEE74C0004449E /* PawButton.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -511,11 +517,13 @@
 			files = (
 				83B1A2BB20B5068C00BB23B0 /* LoginViewController.swift in Sources */,
 				8368B0461FDC7B8400113D26 /* MapDetailViewController.swift in Sources */,
+				8306D4B220FEE74C0004449E /* PawButton.swift in Sources */,
 				DD5FC3F31F4CFD870044810D /* ViewController.swift in Sources */,
 				8384D0AA1FD7A693003C4DBA /* MapMarkerView.swift in Sources */,
 				83FF3FDE1FD6353D006BB0A8 /* MapMarker.swift in Sources */,
 				835ED6871FEA08F40097DA73 /* PawDataManager.swift in Sources */,
 				83FF3FDC1FCF9D94006BB0A8 /* PawLocationManager.swift in Sources */,
+				8306D4B020FEDDCC0004449E /* CreateAccViewController.swift in Sources */,
 				DD5FC3F11F4CFD870044810D /* AppDelegate.swift in Sources */,
 				8306D4AA20FD70EF0004449E /* PawColor.swift in Sources */,
 				DD5FC4201F4CFFC30044810D /* MapViewController.swift in Sources */,

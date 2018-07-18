@@ -31,7 +31,7 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
         
         handle = Auth.auth().addStateDidChangeListener( { (auth, user) in
             if user != nil {
-                //self.performSegue(withIdentifier: viewController name sender: nil)
+                self.performSegue(withIdentifier:"MapViewController", sender: nil)
             }
         })
         
@@ -55,10 +55,6 @@ class LoginViewController : ViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func didTapCreateAccount(_ sender: Any) {
-        
-    }
-    
-    @IBAction func didTapGoogleSignIn(_ sender: Any) {
         
     }
     

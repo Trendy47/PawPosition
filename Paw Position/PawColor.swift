@@ -26,6 +26,10 @@ class PawColor {
     static func accentColor() -> Int {
         return 0x7C4DFF
     }
+    
+    static func accentColorDark() -> Int {
+        return 0x4A0072
+    }
 }
 
 extension UIColor {
